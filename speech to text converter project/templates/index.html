@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="speechwriter">
+    <h1>Upload new file(Please upload .wav audio files here)</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <br>
+        <input type="submit" value="Transcribe" />
+    </form>
+
+
+    {% if transcript != "" %}
+    <div id="speechTranscriptContainer">
+        <h1>Transcript</h1>
+        <p id="speechtext"> {{transcript}}</p>
+    </div>
+    {% endif %}
+
+</div>
+</body>
+</html>
